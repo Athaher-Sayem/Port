@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Athaher Sayem Fahim - Portfolio</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    /* Page background (light) */
+    body { background: #e9ecef; color: #e9ecef; font-family: Arial, sans-serif; }
+
+    /* Centered dark panel like your screenshot */
+    .panel-wrap {
+      max-width: 760px;
+      margin: 30px auto;
+      background: #121212; /* dark interior */
+      color: #dfefff;      /* light text */
+      padding: 28px;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+
+    /* Top area: name + right photo */
+    .top-row { display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap; }
+    .intro {
+      flex: 1 1 420px;
+    }
+    .intro h1 { margin:0; color:#00c2d1; font-weight:700; letter-spacing:0.5px; }
+    .intro p { color:#cbd8e6; margin-top:8px; }
+
+    .profile-photo {
+      width:130px; height:170px; border-radius:4px; object-fit:cover;
+      border: 3px solid rgba(0,194,209,0.12);
+    }
+
+    /* Small nav at top right like screenshot */
+    .mini-nav { text-align:right; margin-bottom:10px; }
+    .mini-nav a { color:#9fdff0; text-decoration:none; margin-left:12px; font-size:0.95rem; }
+
+    /* Resume button */
+    .btn-cv { background:#00c2d1; color:#0a0a0a; font-weight:600; border-radius:4px; padding:8px 14px; text-decoration:none; display:inline-block; }
+
+    /* Portfolio cards */
+    .project {
+      background: #0f0f0f;
+      border: 1px solid rgba(255,255,255,0.03);
+      padding:14px;
+      margin-bottom:18px;
+      border-radius:6px;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .project img { width:200px; height:110px; object-fit:cover; border-radius:3px; }
+    .project .meta h5 { color:#9ff0f6; margin:0 0 6px 0; }
+    .project .meta p { color:#c7d9e9; margin:0 0 8px 0; font-size:0.95rem; }
+
+    /* Skills / badges */
+    .badge-skill { background:#1b3a3f; color:#bfeff2; border-radius:4px; padding:6px 8px; margin:4px; display:inline-block; font-size:0.88rem; }
+
+    /* Contact box */
+    .contact-box {
+      border: 1px solid rgba(255,255,255,0.06);
+      padding:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      border-radius:6px;
+    }
+    .contact-box input, .contact-box textarea {
+      background:#0b0b0b; color:#dfefff; border:1px solid rgba(255,255,255,0.04);
+    }
+
+    footer.small-footer { text-align:center; color:#98bfc6; margin-top:18px; font-size:0.9rem; }
+    a.social { color:#00c2d1; margin:0 8px; text-decoration:none; font-weight:600; }
+    @media (max-width:720px){
+      .top-row { flex-direction:column-reverse; align-items:center; }
+      .profile-photo { width:140px; height:180px; }
+      .project { flex-direction:column; }
+      .project img { width:100%; height:160px; }
+      .mini-nav { text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="panel-wrap">
+
+    <!-- mini nav -->
+    <div class="mini-nav">
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- top: intro + photo -->
+    <div class="top-row" id="home">
+      <div class="intro">
+        <h1>HI! <br> I'M ATHAHER SAYEM FAHIM</h1>
+        <p>Secretary of Press & Public Relations — Bhola Zila Student Forum (BZSF) <br>
+           BSc CSE, Daffodil International University</p>
+
+        <!-- short social + resume -->
+        <div class="mt-3">
+          <a class="btn-cv" href="Md. Athaher Sayem Fahim.pdf" download>Download My CV</a>
+          <span style="margin-left:12px;">
+            <a class="social" href="#" title="facebook">FB</a>
+            <a class="social" href="#" title="github">GH</a>
+            <a class="social" href="#" title="linkedin">LI</a>
+          </span>
+        </div>
+      </div>
+
+      <div class="text-end">
+        <!-- placeholder profile image; replace later -->
+        <img class="profile-photo" src="20240414_165618_0000.png" alt="profile">
+      </div>
+    </div>
+
+    <!-- Portfolio heading -->
+    <hr style="border-color: rgba(255,255,255,0.04); margin:18px 0;">
+    <h4 id="portfolio" style="color:#bfeff2;">Portfolio</h4>
+
+    <!-- Projects (repeatable) -->
+    <div class="project">
+      <img src="vecteezy_modern-computer-screen-showing-sophisticated-data_71758580.jpeg" alt="Project 1">
+      <div class="meta">
+        <h5>Online University Dashboard</h5>
+        <p>Small description: A dashboard that shows student locations and active sessions. Built with HTML, CSS, JS and simple backend (demo).</p>
+        <div>
+          <small style="color:#9fcad0;">Tech: HTML • CSS • JavaScript</small>
+          <div style="margin-top:8px;">
+            <a class="btn btn-sm btn-outline-light" href="#">View</a>
+            <a class="btn btn-sm btn-outline-light" href="#" style="margin-left:8px;">Source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="vecteezy_front-view-of-stacked-books-isolated-on-white-background_24366499.jpg" alt="Project 2">
+      <div class="meta">
+        <h5>Library Management (Terminal)</h5>
+        <p>Terminal-based library system supporting Student/Teacher roles, borrowing, renewing, and fine checks. (School project)</p>
+        <div>
+          <small style="color:#9fcad0;">Tech: Java • File IO</small>
+          <div style="margin-top:8px;">
+            <a class="btn btn-sm btn-outline-light" href="#">View</a>
+            <a class="btn btn-sm btn-outline-light" href="#" style="margin-left:8px;">Source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills & Education -->
+    <hr style="border-color: rgba(255,255,255,0.04); margin:18px 0;">
+    <div id="skills" class="row">
+      <div class="col-md-7">
+        <h5 style="color:#bfeff2;">Expertise</h5>
+        <div class="mb-3">
+          <span class="badge-skill">C++</span>
+          <span class="badge-skill">Java</span>
+          <span class="badge-skill">HTML</span>
+          <span class="badge-skill">CSS</span>
+          <span class="badge-skill">JavaScript</span>
+        </div>
+
+        <h5 style="color:#bfeff2; margin-top:12px;">Comfortable</h5>
+        <div class="mb-3">
+          <span class="badge-skill">Bootstrap</span>
+          <span class="badge-skill">Git</span>
+          <span class="badge-skill">MySQL</span>
+        </div>
+
+        <h5 style="color:#bfeff2; margin-top:12px;">Tools</h5>
+        <div>
+          <span class="badge-skill">VS Code</span>
+          <span class="badge-skill">IntelliJ</span>
+          <span class="badge-skill">Packet Tracer</span>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <h5 style="color:#bfeff2;">My Education</h5>
+        <p style="color:#c7d9e9; margin-top:8px;">
+          BSc. in CSE — Daffodil International University <br>
+          HSC — Adamjee Cantonment College (GPA 5.00) <br>
+          SSC — Bhola Government High School (GPA 5.00)
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <hr style="border-color: rgba(255,255,255,0.04); margin:18px 0;">
+    <h5 style="color:#bfeff2;">Contact with Me</h5>
+
+    <div class="contact-box mt-2" id="contact">
+      <form>
+        <div class="mb-2">
+          <input class="form-control" type="text" placeholder="Your name">
+        </div>
+        <div class="mb-2">
+          <input class="form-control" type="email" placeholder="Your email">
+        </div>
+        <div class="mb-2">
+          <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+        </div>
+        <div class="text-end">
+          <button type="button" class="btn btn-sm btn-outline-light">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="small-footer mt-3">
+      © 2025 Athaher Sayem Fahim — Secretary (Press & PR), BZSF &nbsp; • &nbsp;
+      <a class="social" href="#">facebook</a>
+      <a class="social" href="#">github</a>
+      <a class="social" href="#">linkedin</a>
+    </footer>
+  </div>
+
+</body>
+</html>
